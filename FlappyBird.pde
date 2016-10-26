@@ -23,6 +23,15 @@ public void draw()
 
 }
 
+void mousePressed()
+{
+	
+	bob.myY= bob.myY - 75;
+	bob.accelerate = 0.0;
+
+	
+}
+
 class Bird
 {
 	//variable declarations
@@ -43,36 +52,28 @@ class Bird
 	public void move()
 	{
 		//CHANGE THE SPEED 
-		if(mousePressed == true)
-		{
-			myY= myY - 15.0;
-			accelerate = 0.0;
-		}
-		else
-		{
-			accelerate = accelerate + 0.05;
-			myY = myY + accelerate;
-		}
+		accelerate = accelerate + 0.05;
+		myY = myY + accelerate;
 	}
 
 //show function
 	public void show()
 	{
 		image(flap, (int)myX,(int)myY,50,50);
-		
-		if(get ((int)myX,(int)myY+50)== color(0,255,0))
+		/*
+		if(get ((int)myX,(int)myY+50)!= color(50,50,255))
 		{
 			noLoop();
 			background(0);
 			text("GAME OVER",400,400);
 		}
-		if(get ((int)myX,(int)myY-50)== color(0,255,0))
+		else if(get ((int)myX,(int)myY-50)!= color(50,50,255))
 		{
 			noLoop();
 			background(0);
 			text("GAME OVER",400,400);
 		}
-
+*/
 	}
 }
 
