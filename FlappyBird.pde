@@ -60,20 +60,20 @@ class Bird
 	public void show()
 	{
 		image(flap, (int)myX,(int)myY,50,50);
-		
-		if(get ((int)myX,(int)myY+50)== color(0,255,0))
+		/*
+		if(get ((int)myX,(int)myY+50)!= color(50,50,255))
 		{
 			noLoop();
 			background(0);
 			text("GAME OVER",400,400);
 		}
-		if(get ((int)myX,(int)myY-50)== color(0,255,0))
+		else if(get ((int)myX,(int)myY-50)!= color(50,50,255))
 		{
 			noLoop();
 			background(0);
 			text("GAME OVER",400,400);
 		}
-
+*/
 	}
 }
 
@@ -109,7 +109,6 @@ public class Bars
 		rect(x,length1+150,width1,800);
 	}
 }
-
 
 
 
