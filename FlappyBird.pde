@@ -7,6 +7,7 @@ public void setup()
 {
 	size(800,800);
 	flap = loadImage("https://tctechcrunch2011.files.wordpress.com/2014/07/flappybird_topic.png?fit=1%2C1");
+	background(0);
 }
 
 public void draw()
