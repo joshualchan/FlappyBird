@@ -20,10 +20,35 @@ public void draw()
 	bob.move();
 	b1.show();
 	b1.move();
+	if(get((int)bob.myX+45,(int)bob.myY+45)!= color(50,50,255))
+		{
+			noLoop();
+			background(0);
+			text("GAME OVER",400,400);
+		}
+	if(get((int)bob.myX,(int)bob.myY+45)!= color(50,50,255))
+		{
+			noLoop();
+			background(0);
+			text("GAME OVER",400,400);
+		}
+	if(get((int)bob.myX,(int)bob.myY)!= color(50,50,255))
+	{
+		noLoop();
+		background(0);
+		text("GAME OVER",400,400);
+	}
+	if(get((int)bob.myX +45,(int)bob.myY)!= color(50,50,255))
+		{
+			noLoop();
+			background(0);
+			text("GAME OVER",400,400);
+		}
+	text("myY is: "+ bob.myY,700,20);
 
 }
 
-void mousePressed()
+public void mousePressed()
 {
 	
 	bob.myY= bob.myY - 75;
@@ -47,6 +72,10 @@ class Bird
 		myY = 400.0;
 		accelerate = 0.0;
 	}
+	public void setX(int x){myX = x;}  
+	public int getX(){return (int)myX;}   
+	public void setY(int y){myY = y;}   
+	public int getY(){return (int)myY;}   
 
 //move function
 	public void move()
@@ -60,20 +89,10 @@ class Bird
 	public void show()
 	{
 		image(flap, (int)myX,(int)myY,50,50);
-		/*
-		if(get ((int)myX,(int)myY+50)!= color(50,50,255))
-		{
-			noLoop();
-			background(0);
-			text("GAME OVER",400,400);
-		}
-		else if(get ((int)myX,(int)myY-50)!= color(50,50,255))
-		{
-			noLoop();
-			background(0);
-			text("GAME OVER",400,400);
-		}
-*/
+		
+		
+
+	 
 	}
 }
 
@@ -86,7 +105,7 @@ public class Bars
 		y = 0;
 		x = 600;
 		width1 = 30;
-		length1 = (int)(Math.random()*475);
+		length1 = (int)(Math.random()*415)+60;
 		col = color(0,255,0);
 	}
 	public void move()
@@ -102,6 +121,7 @@ public class Bars
 	public void show()
 	{
 		fill(col);
+		noStroke();
 		//top bar
 		rect(x,y,width1,length1);
 
@@ -109,6 +129,7 @@ public class Bars
 		rect(x,length1+150,width1,800);
 	}
 }
+
 
 
 
