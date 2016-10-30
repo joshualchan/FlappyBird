@@ -26,24 +26,28 @@ public void draw()
 			background(0);
 			text("GAME OVER",400,400);
 		}
-	if(get((int)bob.myX,(int)bob.myY+45)!= color(50,50,255))
+	else if(get((int)bob.myX,(int)bob.myY+45)!= color(50,50,255))
 		{
 			noLoop();
 			background(0);
 			text("GAME OVER",400,400);
 		}
-	if(get((int)bob.myX,(int)bob.myY)!= color(50,50,255))
+	else if(get((int)bob.myX,(int)bob.myY)!= color(50,50,255))
 	{
 		noLoop();
 		background(0);
 		text("GAME OVER",400,400);
 	}
-	if(get((int)bob.myX +45,(int)bob.myY)!= color(50,50,255))
+	else if(get((int)bob.myX +45,(int)bob.myY)!= color(50,50,255))
 		{
 			noLoop();
 			background(0);
 			text("GAME OVER",400,400);
 		}
+	else
+	{
+		redraw();
+	}
 	text("myY is: "+ bob.myY,700,20);
 
 }
