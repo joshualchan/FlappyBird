@@ -59,6 +59,7 @@ public void mousePressed()
 	bob.myY= bob.myY - 75;
 	bob.accelerate = 0.0;
 
+
 	
 }
 
@@ -77,10 +78,10 @@ class Bird
 		myY = 400.0;
 		accelerate = 0.0;
 	}
-	public void setX(int x){myX = x;}  
-	public int getX(){return (int)myX;}   
-	public void setY(int y){myY = y;}   
-	public int getY(){return (int)myY;}   
+	public void setX(double x){myX = x;}  
+	public double getX(){return myX;}   
+	public void setY(double y){myY = y;}   
+	public double getY(){return myY;}   
 
 //move function
 	public void move()
@@ -134,7 +135,6 @@ public class Bars
 		rect(x,length1+150,width1,800);
 	}
 }
-
 
 
 
