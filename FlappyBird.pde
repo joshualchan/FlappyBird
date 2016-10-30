@@ -78,10 +78,7 @@ class Bird
 		myY = 400.0;
 		accelerate = 0.0;
 	}
-	public void setX(double x){myX = x;}  
-	public double getX(){return myX;}   
-	public void setY(double y){myY = y;}   
-	public double getY(){return myY;}   
+
 
 //move function
 	public void move()
