@@ -1,7 +1,7 @@
 PImage flap;
 
-Bird bob = new Bird();
-Bars b1 = new Bars();
+
+// CREATE A NEW INSTANCE OF THE BAR AND BIRD (2 LINES OF CODE)
 
 public void setup()
 {
@@ -17,10 +17,9 @@ public void draw()
 	rect(0,600,800,200);
 	fill(255);
 
-	bob.show();
-	bob.move();
-	b1.show();
-	b1.move();
+
+//CALL THE METHODS OF THE NEW INSTANCE HERE (4 LINES OF CODE)
+
 	if(get((int)bob.myX+45,(int)bob.myY+45)!= color(50,50,255))
 		{
 			noLoop();
@@ -56,7 +55,7 @@ public void draw()
 public void mousePressed()
 {
 	
-	bob.myY= bob.myY - 75;
+	bob.myY= bob.myY - 75;//CHANGE THE FLAP HEIGHT OF THE BIRD
 	bob.accelerate = 0.0;
 
 
@@ -84,7 +83,7 @@ class Bird
 	public void move()
 	{
 		//CHANGE THE SPEED 
-		accelerate = accelerate + 0.05;
+
 		myY = myY + accelerate;
 	}
 
@@ -113,8 +112,10 @@ public class Bars
 	}
 	public void move()
 	{
+	
+	
 		//MAKE BARS MOVE
-		x --;
+
 		if(x<0)
 		{
 			x = 800;
