@@ -105,7 +105,7 @@ public class Bars
 {
 	private int x,y,width1,length1,col;
 
-	Bars()
+	public Bars()
 	{
 		y = 0;
 		x = 600;
